@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>http://www.taxcorrectiongroup.com/info/</loc>
+    <lastmod>2017-08-15T09:51:31-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.taxcorrectiongroup.com/about/</loc>
+    <lastmod>2017-08-14T18:33:40-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.taxcorrectiongroup.com/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.taxcorrectiongroup.com/contact/</loc>
+  </url>
+  
+  <url>
+    <loc>http://www.taxcorrectiongroup.com/faq/</loc>
+  </url>
+  
+  <url>
+    <loc>http://www.taxcorrectiongroup.com/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.taxcorrectiongroup.com/</loc>
+    <lastmod>2017-08-15T09:51:31-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+</urlset>

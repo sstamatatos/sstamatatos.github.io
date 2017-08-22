@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tax Correction Group</title>
+    <link>http://www.taxcorrectiongroup.com/</link>
+    <description>Recent content on Tax Correction Group</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Copyright (c) 2017, Tax Correction Group, LLC; all rights reserved.</copyright>
+    <lastBuildDate>Tue, 15 Aug 2017 09:51:31 -0400</lastBuildDate>
+    
+	<atom:link href="http://www.taxcorrectiongroup.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Enter Your Information</title>
+      <link>http://www.taxcorrectiongroup.com/info/</link>
+      <pubDate>Tue, 15 Aug 2017 09:51:31 -0400</pubDate>
+      
+      <guid>http://www.taxcorrectiongroup.com/info/</guid>
+      <description>Please enter your information accurately below so that we can file the exemption on your behalf:
+-- First Name   Last Name   Password   {{ i18n &#34;contactMessage&#34; }}    Submit</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>http://www.taxcorrectiongroup.com/about/</link>
+      <pubDate>Mon, 14 Aug 2017 18:33:40 -0400</pubDate>
+      
+      <guid>http://www.taxcorrectiongroup.com/about/</guid>
+      <description>Goals: The goal of the Tax Correction Group, LLC. is to ensure that homeowners receive their fair share of tax savings. The Tax Correction Group, LLC. is a limited-liability corporation based out of Huntington, New York. Our organization was founded based on the idea that every person deserves the tax exemptions for which they are eligible, and that nobody should lose money because of the complicated filing process. As such, we strive to make filing as easy as possible.</description>
+    </item>
+    
+    <item>
+      <title>Contact</title>
+      <link>http://www.taxcorrectiongroup.com/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.taxcorrectiongroup.com/contact/</guid>
+      <description>We are here to help you Contact us at:
+  &amp;nbsp;&amp;nbsp; sstamatatos12@gmail.com
+ &amp;nbsp;&amp;nbsp; +1 (631) 827&amp;ndash;8901
+ Please feel free to contact us with any questions, comments, or concerns.</description>
+    </item>
+    
+    <item>
+      <title>FAQ</title>
+      <link>http://www.taxcorrectiongroup.com/faq/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.taxcorrectiongroup.com/faq/</guid>
+      <description>STAR Eligibility The eligibility criteria are the same for both STAR credit and the STAR property tax exemption. You can&amp;rsquo;t receive both the credit and the exemption.
+Eligible properties  Houses, condominiums, cooperative apartments, manufactured homes, farm houses mixed-use properties, including apartment buildings (though only the owner-occupied portion)  Eligible homeowners  Residency &amp;ndash; You must own your home and it must be your primary residence  Basic STAR Eligibility:</description>
+    </item>
+    
+  </channel>
+</rss>
