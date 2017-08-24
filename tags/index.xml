@@ -2,13 +2,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Tax Correction Group</title>
-    <link>http://www.taxcorrectiongroup.com/tags/</link>
+    <link>www.taxcorrectiongroup.com/tags/</link>
     <description>Recent content in Tags on Tax Correction Group</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright (c) 2017, Tax Correction Group, LLC; all rights reserved.</copyright>
     
-	<atom:link href="http://www.taxcorrectiongroup.com/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="www.taxcorrectiongroup.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>
