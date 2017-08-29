@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright (c) 2017, Tax Correction Group, LLC; all rights reserved.</copyright>
-    <lastBuildDate>Tue, 15 Aug 2017 09:51:31 -0400</lastBuildDate>
+    <lastBuildDate>Tue, 29 Aug 2017 14:57:52 -0400</lastBuildDate>
     
 	<atom:link href="http://www.taxcorrectiongroup.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Make an Appointment</title>
+      <link>http://www.taxcorrectiongroup.com/appointment/</link>
+      <pubDate>Tue, 29 Aug 2017 14:57:52 -0400</pubDate>
+      
+      <guid>http://www.taxcorrectiongroup.com/appointment/</guid>
+      <description>First Name   Last Name   Address   Email Address   Phone Number   Appointment Date and Time   Submit</description>
+    </item>
     
     <item>
       <title>Enter Your Information</title>
@@ -19,7 +28,7 @@
       
       <guid>http://www.taxcorrectiongroup.com/info/</guid>
       <description>Please enter your information accurately below so that we can file the exemption on your behalf:
--- First Name   Last Name   Password   {{ i18n &#34;contactMessage&#34; }}    Submit</description>
+First Name   Last Name   Password   {{ i18n &#34;contactMessage&#34; }}    Submit</description>
     </item>
     
     <item>
