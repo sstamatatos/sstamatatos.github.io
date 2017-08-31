@@ -294,6 +294,49 @@
                 <input type="text" class="form-control" name="Social Security Number Confirmation" id="ssn2" required>
             </div>
         </div>
+        <div class="col-sm-12">
+            <div class="form-group">
+              <label for="bday">Date of Birth</label>
+                <input type="date" id="bday" class="form-control" name="Birthday" required>
+            </div>
+        </div>
+        <div class="col-sm-12">
+            <div class="form-group">
+                <label for="otherstate"><input type="checkbox" id="otherstate" name="Property in Another Sate" class="task-list-item"> Does the property owner own additional property in another state for which they are receiving a residency-based property tax benefit?</label>
+            </div>
+        </div>
+        <div id="optionaladdress" hidden disabled>
+            <div class="col-sm-12">
+                <div class="form-group">
+                  <label for="otherstreetaddress">Other Property Street Address</label>
+                    <input id="otherstreetaddress" class="form-control" name="Other Property Street Address">
+                </div>
+            </div>
+            <div class="col-sm-12">
+                <div class="form-group">
+                  <label for="otherapt">Other Property Unit or Apartment</label>
+                    <input id="otherapt" class="form-control" name="Other Property Unit or Apartment">
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group">
+                  <label for="othercitytown">Other Property City or Town</label>
+                    <input type="text" class="form-control" name="Other Property City or Town" id="othercitytown">
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label for="otherzip">Other Property Zip or Postal Code</label>
+                    <input type="text" class="form-control" name="Other Property Zip Code" id="otherzip">
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            document.getElementById('otherstate').onchange = function() {
+                document.getElementById('optionaladdress').disabled = (!this.checked || document.getElementById('mobilehome').checked);
+                document.getElementById('optionaladdress').hidden = (!this.checked || document.getElementById('mobilehome').checked);
+            }
+        </script>
     </div>
     <hr>
 
