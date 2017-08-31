@@ -170,18 +170,20 @@
 
                         <div>
                           <form class="contact-form" method="post" action="https://formspree.io/stamatatos@taxcorrectiongroup.com">
+    <input type="hidden" name="_subject" value="Information Submission" />
+    <input type="text" name="_gotcha" style="display:none" />
     <div class="row">
         <div class="col-sm-12">
             <h3>Property Identification</h3> <hr> <br />
         </div>
         <div class="col-sm-12">
             <div class="form-group">
-                <input type="checkbox" id="mobilehome" name="Mobile Home or Co-op" required class="task-list-item"> <label>Is the property part of a mobile home park or co-op building?</label>
+                <input type="checkbox" id="mobilehome" name="Mobile Home or Co-op" class="task-list-item"> <label>Is the property part of a mobile home park or co-op building?</label>
             </div>
         </div>
         <div class="col-sm-12" id="propertykey">
             <div class="form-group">
-                <input type="checkbox" id="propertykeybox" name="Applicant has Property Key" required class="task-list-item"> <label>Do you have a property key?</label>
+                <input type="checkbox" id="propertykeybox" name="Applicant has Property Key" class="task-list-item"> <label>Do you have a property key?</label>
             </div>
         </div>
         <div class="col-sm-6" id="countyboroughdiv" hidden disabled>
@@ -321,9 +323,6 @@
     <hr>
 
     <div class="row">
-        <input type="hidden" name="_subject" value="Information Submission" />
-        <input type="text" name="_gotcha" style="display:none" />
-
         <div class="col-sm-12 text-center">
           <button type="submit" class="btn btn-template-main">Submit</button>
         </div>
