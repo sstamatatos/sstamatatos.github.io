@@ -6,7 +6,7 @@
   <meta name="robots" content="all,follow">
   <meta name="googlebot" content="index,follow,snippet,archive">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Make an Appointment</title>
+  <title>Submit an Application</title>
   <meta name="author" content="" />
 
   
@@ -56,9 +56,9 @@
   <link rel="alternate" href="http://www.taxcorrectiongroup.com/index.xml" type="application/rss+xml" title="Tax Correction Group">
 
   
-  <meta property="og:title" content="Make an Appointment" />
+  <meta property="og:title" content="Submit an Application" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="/appointment//" />
+  <meta property="og:url" content="/info2//" />
   <meta property="og:image" content="img/logo.png" />
 
 </head>
@@ -77,9 +77,9 @@
         <div class="container">
             <div class="navbar-header">
                 <a class="navbar-brand home" href="http://www.taxcorrectiongroup.com/">
-                    <img src="http://www.taxcorrectiongroup.com/img/logo.png" alt="Make an Appointment logo" class="hidden-xs hidden-sm">
-                    <img src="http://www.taxcorrectiongroup.com/img/logo-small.png" alt="Make an Appointment logo" class="visible-xs visible-sm">
-                    <span class="sr-only">Make an Appointment - go to homepage</span>
+                    <img src="http://www.taxcorrectiongroup.com/img/logo.png" alt="Submit an Application logo" class="hidden-xs hidden-sm">
+                    <img src="http://www.taxcorrectiongroup.com/img/logo-small.png" alt="Submit an Application logo" class="visible-xs visible-sm">
+                    <span class="sr-only">Submit an Application - go to homepage</span>
                 </a>
                 <div class="navbar-buttons">
                     <button type="button" class="navbar-toggle btn-template-main" data-toggle="collapse" data-target="#navigation">
@@ -152,7 +152,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1>Make an Appointment</h1>
+                <h1>Submit an Application</h1>
             </div>
         </div>
     </div>
@@ -169,15 +169,139 @@
                     <div class="col-md-8">
 
                         <div>
-                          <p>Sign up to arrange an appointment with one of the Tax Correction Group representatitves</p>
-
-<hr />
-
-<form class="contact-form" method="post" action="https://formspree.io/stamatatos@taxcorrectiongroup.com">
+                          <form class="contact-form" method="post" action="https://formspree.io/stamatatos@taxcorrectiongroup.com">
     <div class="row">
-        <div class="col-sm-6">
+        <div class="col-sm-12">
+            <h3>Property Identification</h3> <hr> <br />
+        </div>
+        <div class="col-sm-12">
+            <div class="form-group">
+                <input type="checkbox" id="mobilehome" name="Mobile Home or Co-op" required class="task-list-item"> <label>Is the property part of a mobile home park or co-op building?</label>
+            </div>
+        </div>
+        <div class="col-sm-12" id="propertykey">
+            <div class="form-group">
+                <input type="checkbox" id="propertykeybox" name="Applicant has Property Key" required class="task-list-item"> <label>Do you have a property key?</label>
+            </div>
+        </div>
+        <div class="col-sm-6" id="countyboroughdiv" hidden disabled>
+            <div class="form-group">
+                <label for="countyorborough">County or Borough of the Property</label>
+                <input type="text" class="form-control" name="County or Borough" id="countyorborough">
+            </div>
+        </div>
+        <div class="col-sm-6" id="citytowndiv" hidden disabled>
+            <div class="form-group">
+                <label for="cityortown">City or Town of the Property</label>
+                <input type="text" class="form-control" name="City or Town" id="cityortown">
+            </div>
+        </div>
+        <div class="col-sm-12" id="propertykeyinput" disabled hidden>
+            <div class="form-group">
+                <label for="propkey">Property Key</label>
+                <input type="text" class="form-control" name="Property Key" id="propkey">
+            </div>
+        </div>
+        <script type="text/javascript">
+            document.getElementById('mobilehome').onchange = function() {
+                document.getElementById('propertykeybox').checked = false;
+                document.getElementById('propertykey').disabled = (this.checked);
+                document.getElementById('propertykey').hidden = (this.checked);
+                document.getElementById('propertykeyinput').disabled = (!this.checked || document.getElementById('mobilehome').checked);
+                document.getElementById('propertykeyinput').hidden = (!this.checked || document.getElementById('mobilehome').checked);
+
+                document.getElementById('countyboroughdiv').disabled = (!this.checked || document.getElementById('propertykeybox').checked);
+                document.getElementById('countyboroughdiv').hidden = (!this.checked || document.getElementById('propertykeybox').checked);
+                document.getElementById('citytowndiv').disabled = (!this.checked || document.getElementById('propertykeybox').checked);
+                document.getElementById('citytowndiv').hidden = (!this.checked || document.getElementById('propertykeybox').checked);
+            };
+
+            document.getElementById('propertykeybox').onchange = function() {
+                document.getElementById('countyboroughdiv').disabled = (!this.checked || document.getElementById('mobilehome').checked);
+                document.getElementById('countyboroughdiv').hidden = (!this.checked || document.getElementById('mobilehome').checked);
+                document.getElementById('citytowndiv').disabled = (!this.checked || document.getElementById('mobilehome').checked);
+                document.getElementById('citytowndiv').hidden = (!this.checked || document.getElementById('mobilehome').checked);
+                document.getElementById('propertykeyinput').disabled = (!this.checked || document.getElementById('mobilehome').checked);
+                document.getElementById('propertykeyinput').hidden = (!this.checked || document.getElementById('mobilehome').checked);
+            }
+        </script>
+    </div>
+    <hr>
+
+    <div class="row">
+        <div class="col-sm-12">
+            <h3>Property Owner Information</h3> <hr> <br />
+        </div>
+        <div class="col-sm-4">
             <div class="form-group">
               <label for="firstname">First Name</label>
+                <input type="text" class="form-control" name="First Name" id="firstname" required>
+            </div>
+        </div>
+        <div class="col-sm-1">
+            <div class="form-group">
+              <label for="middleinitial">MI</label>
+                <input type="text" class="form-control" name="Middle Initial" id="middleinitial" required>
+            </div>
+        </div>
+        <div class="col-sm-5">
+            <div class="form-group">
+                <label for="lastname">Last Name</label>
+                <input type="text" class="form-control" name="Last Name" id="lastname" required>
+            </div>
+        </div>
+        <div class="col-sm-2">
+            <div class="form-group">
+                <label for="suffix">Suffix</label>
+                <input type="text" class="form-control" name="Suffix" id="suffix" required>
+            </div>
+        </div>
+        <div class="col-sm-12">
+            <div class="form-group">
+              <label for="streetaddress">Street Address</label>
+                <input id="streetaddress" class="form-control" name="Street Address" required>
+            </div>
+        </div>
+        <div class="col-sm-12">
+            <div class="form-group">
+              <label for="apt">Unit or Apartment</label>
+                <input id="apt" class="form-control" name="Unit or Apartment">
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+              <label for="citytown">City or Town</label>
+                <input type="text" class="form-control" name="City or Town" id="citytown" required>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label for="zip">Zip or Postal Code</label>
+                <input type="text" class="form-control" name="Zip Code" id="zip" required>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label for="ssn">Social Security Number</label>
+                <input type="text" class="form-control" name="Social Security Number" id="ssn" required>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label for="ssn2">Confirm Social Security Number</label>
+                <input type="text" class="form-control" name="Social Security Number Confirmation" id="ssn2" required>
+            </div>
+        </div>
+    </div>
+    <hr>
+
+    <div class="row">
+        <div class="col-sm-12">
+            <h3>Property Information</h3> <hr> <br />
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+              <label for="purchasedate">First Name</label>
                 <input type="text" class="form-control" name="First Name" id="firstname" required>
             </div>
         </div>
@@ -189,30 +313,17 @@
         </div>
         <div class="col-sm-12">
             <div class="form-group">
-              <label for="address">Address</label>
-                <input id="address" class="form-control" name="Address" required>
+              <label for="streetaddress">Street Address</label>
+                <input id="streetaddress" class="form-control" name="Street Address" required>
             </div>
         </div>
-        <div class="col-sm-6">
-            <div class="form-group">
-              <label for="email">Email Address</label>
-                <input type="email" class="form-control" name="email" id="email" required>
-            </div>
-        </div>
-        <div class="col-sm-6">
-            <div class="form-group">
-                <label for="phone">Phone Number</label>
-                <input type="tel" class="form-control" name="Phone Number" id="phone" required>
-            </div>
-        </div>
-        <div class="col-sm-12">
-            <div class="form-group">
-              <label for="appointment">Appointment Date and Time</label>
-                <input type="datetime-local" id="appointment" class="form-control" name="Appointment" required>
-            </div>
-        </div>
-        <input type="hidden" name="_subject" value="New appointment" />
+    </div>
+    <hr>
+
+    <div class="row">
+        <input type="hidden" name="_subject" value="Information Submission" />
         <input type="text" name="_gotcha" style="display:none" />
+
         <div class="col-sm-12 text-center">
           <button type="submit" class="btn btn-template-main">Submit</button>
         </div>

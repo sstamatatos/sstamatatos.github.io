@@ -6,7 +6,7 @@
   <meta name="robots" content="all,follow">
   <meta name="googlebot" content="index,follow,snippet,archive">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Enter Your Information</title>
+  <title>Submit an Application</title>
   <meta name="author" content="" />
 
   
@@ -56,7 +56,7 @@
   <link rel="alternate" href="http://www.taxcorrectiongroup.com/index.xml" type="application/rss+xml" title="Tax Correction Group">
 
   
-  <meta property="og:title" content="Enter Your Information" />
+  <meta property="og:title" content="Submit an Application" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="/info//" />
   <meta property="og:image" content="img/logo.png" />
@@ -77,9 +77,9 @@
         <div class="container">
             <div class="navbar-header">
                 <a class="navbar-brand home" href="http://www.taxcorrectiongroup.com/">
-                    <img src="http://www.taxcorrectiongroup.com/img/logo.png" alt="Enter Your Information logo" class="hidden-xs hidden-sm">
-                    <img src="http://www.taxcorrectiongroup.com/img/logo-small.png" alt="Enter Your Information logo" class="visible-xs visible-sm">
-                    <span class="sr-only">Enter Your Information - go to homepage</span>
+                    <img src="http://www.taxcorrectiongroup.com/img/logo.png" alt="Submit an Application logo" class="hidden-xs hidden-sm">
+                    <img src="http://www.taxcorrectiongroup.com/img/logo-small.png" alt="Submit an Application logo" class="visible-xs visible-sm">
+                    <span class="sr-only">Submit an Application - go to homepage</span>
                 </a>
                 <div class="navbar-buttons">
                     <button type="button" class="navbar-toggle btn-template-main" data-toggle="collapse" data-target="#navigation">
@@ -102,6 +102,12 @@
                   <li class="dropdown">
                     
                     <a href="/appointment/">Appointment</a>
+                    
+                  </li>
+                  
+                  <li class="dropdown">
+                    
+                    <a href="/info/">Submit Info</a>
                     
                   </li>
                   
@@ -146,7 +152,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1>Enter Your Information</h1>
+                <h1>Submit an Application</h1>
             </div>
         </div>
     </div>
@@ -163,38 +169,30 @@
                     <div class="col-md-8">
 
                         <div>
-                          <p>Please enter your information accurately below so that we can file the exemption on your behalf:</p>
+                          
+
+<h3 id="confirm-eligibility">Confirm Eligibility</h3>
+
+<p>Check the boxes below to confirm your eligibility before submitting an application to us so that we can file for an exemption on your behalf. If the answer to any of the following questions is &ldquo;no,&rdquo; we cannot file a STAR exemption on your behalf. This is because you are ineligible to receive a STAR benefit if:</p>
+
+<ul>
+<li>You are already receiving one for another property</li>
+<li>You are filing for a second STAR exemption</li>
+</ul>
 
 <hr />
 
-<form class="contact-form" method="post" action="https://formspree.io/stamatatos@gmail.com">
+<h5 id="in-order-to-proceed-i-agree-to-the-following-by-checking-the-boxes-below">In order to proceed, I agree to the following by checking the boxes below:</h5>
+
+<form method="post" action="/info2/">
     <div class="row">
-        <div class="col-sm-6">
-            <div class="form-group">
-              <label for="name">First Name</label>
-                <input type="text" class="form-control" name="First Name" id="firstname" required>
-            </div>
-        </div>
-        <div class="col-sm-6">
-            <div class="form-group">
-                <label for="email">Last Name</label>
-                <input type="text" class="form-control" name="Last Name" id="lastname" required>
-            </div>
-        </div>
-        <div class="col-sm-6">
-            <div class="form-group">
-                <label for="email">Password</label>
-                <input type="password" class="form-control" name="Password" id="password" required>
-            </div>
-        </div>
         <div class="col-sm-12">
             <div class="form-group">
-              <label for="message">{{ i18n "contactMessage" }}</label>
-                <textarea id="message" class="form-control" name="message" required></textarea>
+                <input type="checkbox" required class="task-list-item"> <label>First Name</label>
             </div>
         </div>
         <div class="col-sm-12 text-center">
-          <button type="submit" class="btn btn-template-main">Submit</button>
+          <button type="submit" class="btn btn-template-main">Continue</button>
         </div>
     </div>
 </form>
