@@ -178,12 +178,12 @@
         </div>
         <div class="col-sm-12">
             <div class="form-group">
-                <input type="checkbox" id="mobilehome" name="Mobile Home or Co-op" class="task-list-item"> <label>Is the property part of a mobile home park or co-op building?</label>
+                <input type="checkbox" value=checked id="mobilehome" name="Mobile Home or Co-op" class="task-list-item"> <label>Is the property part of a mobile home park or co-op building?</label>
             </div>
         </div>
         <div class="col-sm-12" id="propertykey">
             <div class="form-group">
-                <input type="checkbox" id="propertykeybox" name="Applicant has Property Key" class="task-list-item"> <label>Do you have a property key?</label>
+                <input type="checkbox" value=checked id="propertykeybox" name="Applicant has Property Key" class="task-list-item"> <label>Do you have a property key?</label>
             </div>
         </div>
         <div class="col-sm-6" id="countyboroughdiv" hidden disabled>
@@ -225,6 +225,48 @@
                 document.getElementById('citytowndiv').hidden = (!this.checked || document.getElementById('mobilehome').checked);
                 document.getElementById('propertykeyinput').disabled = (!this.checked || document.getElementById('mobilehome').checked);
                 document.getElementById('propertykeyinput').hidden = (!this.checked || document.getElementById('mobilehome').checked);
+            }
+        </script>
+    </div>
+    <hr>
+
+    <div class="row">
+        <div class="col-sm-12">
+            <h3>Property Information</h3> <hr> <br />
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+              <label for="sellerfirstname">Seller First Name</label>
+                <input type="text" class="form-control" name="Seller First Name" id="sellerfirstname" required>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label for="sellerlastname">Seller Last Name</label>
+                <input type="text" class="form-control" name="Seller Last Name" id="sellerlastname" required>
+            </div>
+        </div>
+        <div class="col-sm-12">
+            <div class="form-group">
+              <label for="purchasedate">Date of Purchase</label>
+                <input type="date" id="purchasedate" class="form-control" name="Purchase Date" required>
+            </div>
+        </div>
+        <div class="col-sm-12" id="trust">
+            <div class="form-group">
+                <input type="checkbox" value=checked id="trustbox" name="Property Held in Trust or Life Estate" class="task-list-item"> <label>Is this property held either in a trust or life estate?</label>
+            </div>
+        </div>
+        <div class="col-sm-12" id="additionaltrustinfo" hidden disabled>
+            <div class="form-group">
+              <label for="trustinfo">Additional Information About the Trust or Life Estate</label>
+                <input id="trustinfo" class="form-control" name="Additional Trust Information">
+            </div>
+        </div>
+        <script type="text/javascript">
+            document.getElementById('trustbox').onchange = function() {
+                document.getElementById('additionaltrustinfo').disabled = !this.checked;
+                document.getElementById('additionaltrustinfo').hidden = !this.checked;
             }
         </script>
     </div>
@@ -302,7 +344,7 @@
         </div>
         <div class="col-sm-12">
             <div class="form-group">
-                <label for="otherstate"><input type="checkbox" id="otherstate" name="Property in Another Sate" class="task-list-item"> Does the property owner own additional property in another state for which they are receiving a residency-based property tax benefit?</label>
+                <label for="otherstate"><input type="checkbox" value=checked id="otherstate" name="Property in Another Sate" class="task-list-item"> Does the property owner own additional property in another state for which they are receiving a residency-based property tax benefit?</label>
             </div>
         </div>
         <div id="optionaladdress" hidden disabled>
@@ -333,8 +375,62 @@
         </div>
         <script type="text/javascript">
             document.getElementById('otherstate').onchange = function() {
-                document.getElementById('optionaladdress').disabled = (!this.checked || document.getElementById('mobilehome').checked);
-                document.getElementById('optionaladdress').hidden = (!this.checked || document.getElementById('mobilehome').checked);
+                document.getElementById('optionaladdress').disabled = !this.checked;
+                document.getElementById('optionaladdress').hidden = !this.checked;
+            }
+        </script>
+        <div class="col-sm-12">
+            <div class="form-group">
+                <label for="spouse"><input type="checkbox" value=checked id="spouse" name="Spouse" class="task-list-item"> Does this property owner have a spouse?</label>
+            </div>
+        </div>
+        <div id="optionalspouse" hidden disabled>
+            <div class="col-sm-12">
+                <div class="form-group">
+                    <label for="spouseowner"><input type="checkbox" value=checked id="spouseowner" name="Spouse is Owner" class="task-list-item"> Is this spouse an owner of this property?</label>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="form-group">
+                  <label for="spousefirstname">Spouse First Name</label>
+                    <input type="text" class="form-control" name="Spouse First Name" id="spousefirstname" >
+                </div>
+            </div>
+            <div class="col-sm-1">
+                <div class="form-group">
+                  <label for="spousemiddleinitial">MI</label>
+                    <input type="text" class="form-control" name="Spouse Middle Initial" id="spousemiddleinitial" >
+                </div>
+            </div>
+            <div class="col-sm-5">
+                <div class="form-group">
+                    <label for="spouselastname">Spouse Last Name</label>
+                    <input type="text" class="form-control" name="Spouse Last Name" id="spouselastname" >
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="form-group">
+                    <label for="spousesuffix">Suffix</label>
+                    <input type="text" class="form-control" name="Spouse Suffix" id="spousesuffix" >
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label for="spousessn">Spouse Social Security Number</label>
+                    <input type="text" class="form-control" name="Spouse Social Security Number" id="spousessn" >
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label for="spousessn2">Confirm Spouse Social Security Number</label>
+                    <input type="text" class="form-control" name="Spouse Social Security Number Confirmation" id="spousessn2" >
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            document.getElementById('spouse').onchange = function() {
+                document.getElementById('optionalspouse').disabled = !this.checked;
+                document.getElementById('optionalspouse').hidden = !this.checked;
             }
         </script>
     </div>
@@ -342,24 +438,115 @@
 
     <div class="row">
         <div class="col-sm-12">
-            <h3>Property Information</h3> <hr> <br />
+            <h3>Income Tax Filing</h3> <hr> <br />
         </div>
-        <div class="col-sm-6">
+        <div class="col-sm-12">
             <div class="form-group">
-              <label for="purchasedate">First Name</label>
-                <input type="text" class="form-control" name="First Name" id="firstname" required>
-            </div>
-        </div>
-        <div class="col-sm-6">
-            <div class="form-group">
-                <label for="lastname">Last Name</label>
-                <input type="text" class="form-control" name="Last Name" id="lastname" required>
+                <input type="checkbox" value=checked id="nystax" name="NYS Income Tax Return" class="task-list-item"> <label>Did the owner file a New York State tax return in 2015?</label>
             </div>
         </div>
         <div class="col-sm-12">
             <div class="form-group">
-              <label for="streetaddress">Street Address</label>
-                <input id="streetaddress" class="form-control" name="Street Address" required>
+                <input type="checkbox" value=checked id="fedtax" name="Federal Income Tax Return" class="task-list-item"> <label>Did the owner file a federal tax return in 2015?</label>
+            </div>
+        </div>
+        <div class="col-sm-12" id="filingstatusinfo" hidden disabled>
+            <div class="form-group">
+                <label for="filingstatus">Filing Status</label>
+                <select name="Filing Status" id="filingstatus">
+                  <option value="Single">Single</option>
+                  <option value="Married Filing Joint Return">Married Filing Joint Return</option>
+                  <option value="Head of Household">Head of Household</option>
+                  <option value="Qualifying Widower with Dependent Child">Qualifying Widower with Dependent Child</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-sm-12" id="fagigroup" hidden disabled>
+            <div class="form-group">
+              <label for="fagi">Federal Adjusted Gross Income (FAGI) ($)</label>
+                <input type="text" class="form-control" name="FAGI" id="fagi">
+            </div>
+        </div>
+        <script type="text/javascript">
+            document.getElementById('nystax').onchange = function() {
+                document.getElementById('fagigroup').disabled = !(this.checked || document.getElementById('fedtax').checked);
+                document.getElementById('fagigroup').hidden = !(this.checked || document.getElementById('fedtax').checked);
+            }
+
+            document.getElementById('fedtax').onchange = function() {
+                document.getElementById('fagigroup').disabled = !(this.checked || document.getElementById('nystax').checked);
+                document.getElementById('fagigroup').hidden = !(this.checked || document.getElementById('nystax').checked);
+
+                document.getElementById('filingstatusinfo').disabled = !this.checked;
+                document.getElementById('filingstatusinfo').hidden = !this.checked;
+            }
+        </script>
+    </div>
+    <hr>
+
+    <div class="row">
+        <div class="col-sm-12">
+            <h3>Applicant Information</h3> 
+            <p>Please re-enter, even if the applicant information is the same as the property owner information above</p> <hr> <br />
+        </div>
+        <div class="col-sm-4">
+            <div class="form-group">
+              <label for="applicantfirstname">Applicant First Name</label>
+                <input type="text" class="form-control" name="Applicant First Name" id="applicantfirstname" required>
+            </div>
+        </div>
+        <div class="col-sm-1">
+            <div class="form-group">
+              <label for="applicantmiddleinitial">MI</label>
+                <input type="text" class="form-control" name="Applicant Middle Initial" id="applicantapplicantmiddleinitial" required>
+            </div>
+        </div>
+        <div class="col-sm-5">
+            <div class="form-group">
+                <label for="applicantlastname">Applicant Last Name</label>
+                <input type="text" class="form-control" name="Applicant Last Name" id="applicantlastname" required>
+            </div>
+        </div>
+        <div class="col-sm-2">
+            <div class="form-group">
+                <label for="applicantsuffix">Suffix</label>
+                <input type="text" class="form-control" name="Applicant Suffix" id="applicantsuffix" required>
+            </div>
+        </div>
+        <div class="col-sm-12">
+            <div class="form-group">
+              <label for="applicantstreetaddress">Applicant Street Address</label>
+                <input id="applicantstreetaddress" class="form-control" name="Applicant Street Address" required>
+            </div>
+        </div>
+        <div class="col-sm-12">
+            <div class="form-group">
+              <label for="applicantapt">Applicant Unit or Apartment</label>
+                <input id="applicantapt" class="form-control" name="Applicant Unit or Apartment">
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+              <label for="applicantcitytown">Applicant City or Town</label>
+                <input type="text" class="form-control" name="Applicant City or Town" id="applicantcitytown" required>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label for="applicantzip">Applicant Zip or Postal Code</label>
+                <input type="text" class="form-control" name="Applicant Zip Code" id="applicantzip" required>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+              <label for="applicantemail">Applicant Email Address</label>
+                <input type="email" class="form-control" name="email" id="email" required>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label for="applicantphone">Applicant Phone Number</label>
+                <input type="tel" class="form-control" name="Applicant Phone Number" id="applicantphone" required>
             </div>
         </div>
     </div>
