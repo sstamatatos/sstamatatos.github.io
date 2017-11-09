@@ -201,7 +201,6 @@
         </div>
         <script type="text/javascript">
             document.getElementById('mobilehome').onchange = function() {
-                document.getElementById('propertykeybox').checked = false;
                 document.getElementById('propertykey').disabled = (this.checked);
                 document.getElementById('propertykey').hidden = (this.checked);
                 document.getElementById('propertykeyinput').disabled = (!this.checked || document.getElementById('mobilehome').checked);
