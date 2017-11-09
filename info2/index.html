@@ -193,23 +193,9 @@
                 <input type="text" class="form-control" name="City or Town" id="cityortown">
             </div>
         </div>
-        <div class="col-sm-12" id="propertykeyinput" disabled hidden>
-            <div class="form-group">
-                <label for="propkey">Property Key</label>
-                <input type="text" class="form-control" name="Property Key" id="propkey">
-            </div>
-        </div>
         <script type="text/javascript">
             document.getElementById('mobilehome').onchange = function() {
-                document.getElementById('propertykey').disabled = (this.checked);
-                document.getElementById('propertykey').hidden = (this.checked);
-                document.getElementById('propertykeyinput').disabled = (!this.checked || document.getElementById('mobilehome').checked);
-                document.getElementById('propertykeyinput').hidden = (!this.checked || document.getElementById('mobilehome').checked);
-
-                document.getElementById('countyboroughdiv').disabled = (!this.checked || document.getElementById('propertykeybox').checked);
-                document.getElementById('countyboroughdiv').hidden = (!this.checked || document.getElementById('propertykeybox').checked);
-                document.getElementById('citytowndiv').disabled = (!this.checked || document.getElementById('propertykeybox').checked);
-                document.getElementById('citytowndiv').hidden = (!this.checked || document.getElementById('propertykeybox').checked);
+                document.getElementById('mobilehome').checked;
             };
         </script>
     </div>
